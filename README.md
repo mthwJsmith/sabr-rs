@@ -57,7 +57,7 @@ The `proto/` directory contains protobuf definitions for SABR's wire format. The
 ## Credits
 
 - **[LuanRT/googlevideo](https://github.com/LuanRT/googlevideo)** (MIT) - TypeScript SABR reference implementation and protobuf definitions. This crate's protocol logic is a Rust port of that work. The proto files in `proto/` are from that repo.
-- **[nichobi/yt-sabr-shaka-demo](https://github.com/nichobi/yt-sabr-shaka-demo)** - Minimal SABR demo that helped clarify the request/response flow.
+- **[nichobi/yt-sabr-shaka-demo](https://github.com/LuanRT/yt-sabr-shaka-demo)** - Minimal SABR demo that helped clarify the request/response flow.
 - **[LuanRT/YouTube.js](https://github.com/LuanRT/YouTube.js)** - YouTube's InnerTube API reverse engineering.
 
 ## License
