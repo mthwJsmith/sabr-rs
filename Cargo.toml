@@ -1,0 +1,31 @@
+[package]
+name = "sabr-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Rust implementation of YouTube's SABR (Server Adaptive Bit Rate) streaming protocol"
+license = "MIT"
+repository = "https://github.com/mthwJsmith/sabr-rs"
+
+[dependencies]
+tokio = { version = "1", features = ["rt", "time", "sync"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "stream"] }
+prost = "0.13"
+base64 = "0.22"
+bytes = "1"
+serde_json = "1"
+tracing = "0.1"
+futures-util = "0.3"
+
+[build-dependencies]
+prost-build = "0.13"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt", "macros"] }
+tracing-subscriber = { version = "0.3", features = ["fmt"], default-features = false }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
